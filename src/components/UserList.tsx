@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
-import { useTypedSelector } from '../hooks/useTypedSelecor.ts';
-import { useDispatch } from 'react-redux';
-import { fetchUsers } from '../store/action-creators/user.ts';
+import { useTypedSelector } from '../hooks/useTypedSelector.ts';
 import { useActions } from '../hooks/useActions.ts';
 
 const UserList: React.FC = () => {
@@ -20,7 +18,6 @@ const UserList: React.FC = () => {
     return <h1>{error}</h1>;
   }
 
-  console.log(users);
   return (
     <ul>
       {users.map((u) => (
